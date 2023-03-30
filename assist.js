@@ -1,5 +1,3 @@
-
-
 function save(_account){
     let account = _account;
 
@@ -24,22 +22,3 @@ function save(_account){
     link.click();
 
 }
-
-save(alice);
-
-const alice_prbkey = alice.privateKey;
-const alice_pubkey = alice.publicKey;
-const alice_address_row = alice.address.address;
-const alice_address_ntype = alice.address.networkType;
-
-let text = "alice privateKey:"+alice_prbkey+ "\r\n";
-text = text +"alice publicKey:"+alice_pubkey+ "\r\n";
-text = text +"alice RowAddress:"+alice_address_row+ "\r\n";
-text = text +"alice Type:"+alice_address_ntype+ "\r\n";
-console.log(text);
-
-const blob = new Blob(['あいうえお'],{type:"text/plain"});
-const link = document.createElement('a');
-link.href = URL.createObjectURL(blob);
-link.download = 'ファイル名.txt';
-link.click();
